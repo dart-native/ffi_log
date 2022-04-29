@@ -1,0 +1,35 @@
+PODS:
+  - ClassWrittenInSwift (0.0.4)
+  - dart_native (0.0.1):
+    - ClassWrittenInSwift (~> 0.0.4)
+    - Flutter
+  - ffi_log (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - dart_native (from `.symlinks/plugins/dart_native/ios`)
+  - ffi_log (from `.symlinks/plugins/ffi_log/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - ClassWrittenInSwift
+
+EXTERNAL SOURCES:
+  dart_native:
+    :path: ".symlinks/plugins/dart_native/ios"
+  ffi_log:
+    :path: ".symlinks/plugins/ffi_log/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  ClassWrittenInSwift: de0543e7c1a836e190af74fddff84ad9b2f3d18c
+  dart_native: 3ed31c9e40530ad0ae006c0b7cf75a22b24e933f
+  ffi_log: 20496736979a006aefcdc90c4bdf77ea06cecfae
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.11.2
