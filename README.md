@@ -82,5 +82,6 @@ FFILog.setLog(new FFILog.ILog() {
 });
 ```
 
-##License
+## License
+
 ffi_log is available under the BSD 3-Clause License. See the LICENSE file for more info.
