@@ -29,13 +29,7 @@ public class FFILog {
 
         int getLogLevel();
 
-        void e(String tag, String s);
-
-        void w(String tag, String s);
-
-        void i(String tag, String s);
-
-        void d(String tag, String s);
+        void printLog(int level, String tag, String content);
 
         // If custom so path, need implementation this method.
         default String getCustomDartNativePath() {

@@ -48,37 +48,37 @@ Java code:
 ```java
 // set FFILog.ILog implementation
 FFILog.setLog(new FFILog.ILog() {
-        @Override
-        public void d(String tag, String log) {
-            Log.d(tag, log);
+    @Override
+    public void printLog(int level, String tag, String content) {
+        switch (level) {
+            case FFILog.ILog.ERROR:
+                Log.e(tag, content);
+                break;
+            case FFILog.ILog.WARN:
+                Log.w(tag, content);
+                break;
+            case FFILog.ILog.INFO:
+                Log.i(tag, content);
+                break;
+            case FFILog.ILog.DEBUG:
+                Log.d(tag, content);
+                break;
+            default:
+                break;
         }
+    }
 
-        @Override
-        public void i(String tag, String log) {
-            Log.i(tag, log);
-        }
+    @Override
+    public int getLogLevel() {
+        return FFILog.ILog.ALL;
+    }
 
-        @Override
-        public void w(String tag, String log) {
-            Log.w(tag, log);
-        }
-
-        @Override
-        public void e(String tag, String log) {
-            Log.e(tag, log);
-        }
-
-        @Override
-        public int getLogLevel() {
-            return FFILog.ILog.ALL;
-        }
-
-        // If dartnative so path is custom, return so path.
-        // Otherwise return null.
-        @Override
-        public String getCustomDartNativePath() {
-            return null;
-        }
+    // If dartnative so path is custom, return so path.
+    // Otherwise return null.
+    @Override
+    public String getCustomDartNativePath() {
+        return null;
+    }
 });
 ```
 

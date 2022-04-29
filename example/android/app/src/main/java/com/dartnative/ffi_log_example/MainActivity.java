@@ -15,27 +15,23 @@ public class MainActivity extends FlutterActivity {
         super.onCreate(savedInstanceState);
         FFILog.setLog(new FFILog.ILog() {
             @Override
-            public void d(String tag, String log) {
-                Log.d(tag, log);
-
-            }
-
-            @Override
-            public void i(String tag, String log) {
-                Log.i(tag, log);
-
-            }
-
-            @Override
-            public void w(String tag, String log) {
-                Log.w(tag, log);
-
-            }
-
-            @Override
-            public void e(String tag, String log) {
-                Log.e(tag, log);
-
+            public void printLog(int level, String tag, String content) {
+                switch (level) {
+                    case FFILog.ILog.ERROR:
+                        Log.e(tag, content);
+                        break;
+                    case FFILog.ILog.WARN:
+                        Log.w(tag, content);
+                        break;
+                    case FFILog.ILog.INFO:
+                        Log.i(tag, content);
+                        break;
+                    case FFILog.ILog.DEBUG:
+                        Log.d(tag, content);
+                        break;
+                    default:
+                        break;
+                }
             }
 
             @Override
