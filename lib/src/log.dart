@@ -16,10 +16,10 @@ class FFILog {
   static final Interface _logInterface = Interface("FFILog");
 
   static LogLevel _logLevel = LogLevel.info;
-  static bool _needPrintInFlutter = true;
+  static bool _printInFlutter = true;
 
-  static void init({bool needPrintInFlutter = true}) {
-    _needPrintInFlutter = needPrintInFlutter;
+  static void init({bool printInFlutter = true}) {
+    _printInFlutter = printInFlutter;
     _logLevel = LogLevel.values[_getLogLevel()];
   }
 
@@ -42,7 +42,7 @@ class FFILog {
   }
 
   static _logWithLevel(LogLevel level, String tag, String message) {
-    if (_needPrintInFlutter) {
+    if (_printInFlutter) {
       print("$tag : $message");
     }
 

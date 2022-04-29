@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    FFILog.init(needPrintInFlutter: true);
+    FFILog.init(printInFlutter: true);
   }
 
   @override
