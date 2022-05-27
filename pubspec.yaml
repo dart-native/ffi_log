@@ -11,11 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  dart_native:
-    git:
-      url: 'https://github.com/dart-native/dart_native.git'
-      ref: '9b1b2846e806c8192b262610351f18bd5b016a74'
-      path: dart_native
+  dart_native: ^0.7.0
 
   stack_trace: ^1.9.3
   

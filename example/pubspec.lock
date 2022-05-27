@@ -95,12 +95,10 @@ packages:
   dart_native:
     dependency: transitive
     description:
-      path: dart_native
-      ref: "9b1b2846e806c8192b262610351f18bd5b016a74"
-      resolved-ref: "9b1b2846e806c8192b262610351f18bd5b016a74"
-      url: "https://github.com/dart-native/dart_native.git"
-    source: git
-    version: "0.6.6"
+      name: dart_native
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.0"
   dart_native_gen:
     dependency: transitive
     description:
